@@ -1,7 +1,7 @@
 {
   "name": "rs",
-  "displayName": "rathena",
-  "description": "rathena script",
+  "displayName": "rAthena",
+  "description": "rAthena for PDR Emulator",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.87.0"
