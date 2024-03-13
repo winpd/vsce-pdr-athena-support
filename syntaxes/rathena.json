@@ -1,0 +1,88 @@
+{
+	"version": "1.0.0",
+	"scopeName": "source.rathena",
+	"name": "rAthena",
+	"fileTypes": [
+		"rs",
+		"ers"
+	],
+	"patterns": [
+		{
+			"match": "\\b(if|else|switch|case|break|default|for|do|while|return|goto)\\b",
+			"name": "keyword.control.rathena"
+		},
+		{
+			"match": "\\b(?i)(set|setarray|end)\\b",
+			"name": "support.function.1.rathena"
+		},
+		{
+			"match": "^(On.+):$",
+			"name": "entity.name.label.rathena"
+		},
+		{
+			"match": "\\b(?i)(true|false|TRUE|FALSE)\\b",
+			"name": "constant.language.const.rathena"
+		},
+		{
+			"match": "\\b\t(typescript_name)\t\\b",
+			"name": "entity.name.type.script.rathena"
+		},
+		{
+			"match": "(?!/\\*|\\*/)(<=|>=|!=|=|>|<|\\+|\\-|\\*)",
+			"name": "keyword.operator.rathena"
+		},
+		{
+			"match": "([0-9]+)",
+			"name": "constant.numeric.rathena"
+		},
+		{
+			"begin": "/\\*",
+			"end": "\\*/",
+			"name": "comment.block.rathena"
+		},
+		{
+			"match": "([\"])(?:(?=(\\\\?))\\2.)*?\\1",
+			"name": "string.block.rathena"
+		},
+		{
+			"match": "(\\$\\w+\\$?)",
+			"name": "variable.global.rathena"
+		},
+		{
+			"match": "(\\$\\@\\w+\\$?)",
+			"name": "variable.temporal.global.rathena"
+		},
+		{
+			"match": "(\\@\\w+\\$?)",
+			"name": "variable.temporal.character.rathena"
+		},
+		{
+			"match": "(\\.\\w+\\$?)",
+			"name": "variable.npc.rathena"
+		},
+		{
+			"match": "(\\.\\@\\w+\\$?)",
+			"name": "variable.scope.rathena"
+		},
+		{
+			"match": "('\\w+\\$?)",
+			"name": "variable.instance.rathena"
+		},
+		{
+			"match": "(\\#\\w+\\$?)",
+			"name": "variable.permanent.local.rathena"
+		},
+		{
+			"match": "(\\#\\#\\w+\\$?)",
+			"name": "variable.permanent.global.rathena"
+		},
+		{
+			"match": "^\\s*//.*$",
+			"name": "comment.rathena"
+		},
+		{
+			"match": "\\s*//.*$",
+			"name": "comment.rathena"
+		}
+	]
+}

@@ -1,71 +1,37 @@
-# rs README
 
-This is the README for your extension "rs". After writing up a brief description, we recommend including the following sections.
+# Visual Studio Code PDR-ATHENA Support
 
-## Features
+이 extension은 PDR-Athena 스크립트 언어에 대한 Syntax 하이라이팅과 코드 스니펫을 제공합니다.
+단, rAthena 공식 홈페이지에서 제공하는 Syntax가 아닌, PDR Emulator에서 제공하는 Syntax를 기반으로 합니다.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## File extension support
 
-For example if there is an image subfolder under your extension project workspace:
+PDR-Athena는 자동으로 파일 확장자를 탐지하며 하이라이팅과 기능을 제공합니다. (.rs, .ers)
 
-\!\[feature X\]\(images/feature-x.png\)
+혹은 각 파일의 시작 내용이 `//!rathena`, `//!athena`, `//!pdr` 로 시작하는 경우에도 자동으로 감지하여
+하이라이팅을 지원합니다.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Snippets
 
-## Requirements
+코드 스니펫은 PDR에서 제공하는 rAthena script 기능을 기준으로 지원합니다.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+* `On:` event handler snippet
+* `for`, `while`, `do` flow control snippet
 
-## Extension Settings
+## Installation
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+Visual Studio Code의 확장 메뉴에서 직접 확장을 설치하거나 다음을 방문하여 확장을 설치할 수 있도록 할 예정입니다.
 
-For example:
 
-This extension contributes the following settings:
+## Contributing
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+건의사항 및 이슈를 자유롭게 말씀 해주세요. 
+이 확장 프로그램의 문법 정의를 계속해서 개선해나갈 수 있습니다.
 
-## Known Issues
+## License
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+이 확장자는 MIT 라이센스를 따릅니다.
 
-## Release Notes
+## Special thanks
 
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+이 확장은 처음에 Atom 편집기용 [JoWei's language-athena](https://github.com/JoWei/language-athena)에서 이식되었으며 rAthena Dev Team의 구성원인 secretdataz가 VS Marketplace를 통해 게시했습니다. 이후 rAthena Dev Team의 [vsce-rathena-language-support](https://github.com/rathena/vsce-rathena-language-support)의 rep를 기반으로 확장자를 PDR 환경에 맞게끔 수정하였습니다.

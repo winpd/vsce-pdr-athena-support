@@ -2,21 +2,72 @@
   "name": "rs",
   "displayName": "rAthena",
   "description": "rAthena for PDR Emulator",
+  "publisher": "winpd",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/winpd/vsce-pdr-athena-support"
+  },
+  "author": {
+    "name": "winpd"
+  },
+  "contributors": [
+    {
+        "name": "JoWei",
+        "url": "https://github.com/JoWei"
+    },
+    {
+        "name": "Jittapan Pleumsumran",
+        "url": "https://github.com/secretdataz/athena-language-support"
+    },
+    {
+        "name": "rAthena Dev Team",
+        "url": "https://github.com/rathena/vsce-rathena-language-support"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/winpd/vsce-pdr-athena-support/issues"
+  },
+  "license": "MIT",
+  "private": false,
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.87.0"
   },
   "categories": [
-    "Other"
+    "Programming Languages",
+    "Snippets"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
-    "commands": [
+    "languages": [
       {
-        "command": "rs.helloWorld",
-        "title": "Hello World"
+          "id": "rathena",
+          "aliases": [
+              "rAthena",
+              "rathena"
+          ],
+          "extensions": [
+              ".rs",
+              ".ers"
+          ],
+          "configuration": "./language-configuration.json"
       }
+    ],
+    "grammars": [
+        {
+            "language": "rathena",
+            "scopeName": "source.rathena",
+            "path": "./syntaxes/rathena.json"
+        }
+    ],
+    "snippets": [
+        {
+            "language": "rathena",
+            "path": "./snippets/rathena.json"
+        }
     ]
   },
   "scripts": {
@@ -31,17 +82,20 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.87.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
+    "@types/vscode": "^1.87.0",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
-    "eslint": "^8.56.0",
-    "typescript": "^5.3.3",
-    "ts-loader": "^9.5.1",
-    "webpack": "^5.90.3",
-    "webpack-cli": "^5.1.4",
     "@vscode/test-cli": "^0.0.6",
-    "@vscode/test-electron": "^2.3.9"
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.56.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "tslint": "^6.1.3"
   }
 }
