@@ -96,6 +96,8 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "iconv-lite": "^0.6.3",
+    "jschardet": "^3.0.0",
     "tslint": "^6.1.3"
   }
 }
