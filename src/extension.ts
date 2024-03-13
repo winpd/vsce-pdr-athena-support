@@ -13,6 +13,7 @@ function associateFile (doc: vscode.TextDocument): void {
 
 export function activate (context: vscode.ExtensionContext): void {
   const provider = new CompletionProvider();
+  const triggerCharacters = ['set', 'get'];
 
   //파일 스니펫 및 context 처리
   for (const doc of vscode.workspace.textDocuments) {
@@ -23,7 +24,7 @@ export function activate (context: vscode.ExtensionContext): void {
   context.subscriptions.push(vscode.workspace.onDidOpenTextDocument(associateFile));
   context.subscriptions.push(vscode.workspace.onDidSaveTextDocument(associateFile));
 
-  context.subscriptions.push(vscode.languages.registerCompletionItemProvider({ language: 'rathena', scheme: 'file' }, provider));
+  context.subscriptions.push(vscode.languages.registerCompletionItemProvider({ language: 'rathena', scheme: 'file' }, provider, ...triggerCharacters));
   
   context.subscriptions.push(vscode.workspace.onDidOpenTextDocument(document => {
     if (isRathenaHeader(document.lineAt(0).text) || (document.fileName.endsWith('.rs') || document.fileName.endsWith('.ers'))) {

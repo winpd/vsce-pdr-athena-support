@@ -1,7 +1,12 @@
 import * as vscode from 'vscode';
 
 export class CompletionProvider implements vscode.CompletionItemProvider {
-    provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): vscode.ProviderResult<vscode.CompletionItem[] | vscode.CompletionList> {
+    provideCompletionItems(
+        document: vscode.TextDocument, 
+        position: vscode.Position, 
+        token: vscode.CancellationToken, 
+        context: vscode.CompletionContext
+    ): vscode.ProviderResult<vscode.CompletionItem[] | vscode.CompletionList> {
         const linePrefix = document.lineAt(position).text.substr(0, position.character);
         const userTyped = linePrefix.split(' ').pop(); // 사용자가 최근에 입력한 단어를 가져옴
 
