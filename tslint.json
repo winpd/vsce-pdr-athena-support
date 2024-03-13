@@ -1,9 +1,4 @@
 {
-    "defaultSeverity": "error",
-    "extends": [
-        "tslint:recommended"
-    ],
-    "jsRules": {},
 	"rules": {
 		"no-string-throw": true,
 		"no-unused-expression": true,
@@ -16,5 +11,5 @@
 		],
 		"triple-equals": true
 	},
-    "rulesDirectory": []
+	"defaultSeverity": "warning"
 }

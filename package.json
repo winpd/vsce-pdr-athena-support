@@ -1,27 +1,27 @@
 {
-  "name": "rs",
-  "displayName": "rAthena",
+  "name": "pdr-athena-support",
+  "displayName": "PDR-Athena-Support",
   "description": "rAthena for PDR Emulator",
   "publisher": "winpd",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/winpd/vsce-pdr-athena-support"
+    "type": "git",
+    "url": "https://github.com/winpd/vsce-pdr-athena-support"
   },
   "author": {
     "name": "winpd"
   },
   "contributors": [
     {
-        "name": "JoWei",
-        "url": "https://github.com/JoWei"
+      "name": "JoWei",
+      "url": "https://github.com/JoWei"
     },
     {
-        "name": "Jittapan Pleumsumran",
-        "url": "https://github.com/secretdataz/athena-language-support"
+      "name": "Jittapan Pleumsumran",
+      "url": "https://github.com/secretdataz/athena-language-support"
     },
     {
-        "name": "rAthena Dev Team",
-        "url": "https://github.com/rathena/vsce-rathena-language-support"
+      "name": "rAthena Dev Team",
+      "url": "https://github.com/rathena/vsce-rathena-language-support"
     }
   ],
   "bugs": {
@@ -44,30 +44,30 @@
   "contributes": {
     "languages": [
       {
-          "id": "rathena",
-          "aliases": [
-              "rAthena",
-              "rathena"
-          ],
-          "extensions": [
-              ".rs",
-              ".ers"
-          ],
-          "configuration": "./language-configuration.json"
+        "id": "rathena",
+        "aliases": [
+          "rAthena",
+          "rathena"
+        ],
+        "extensions": [
+          ".rs",
+          ".ers"
+        ],
+        "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
-        {
-            "language": "rathena",
-            "scopeName": "source.rathena",
-            "path": "./syntaxes/rathena.json"
-        }
+      {
+        "language": "rathena",
+        "scopeName": "source.rathena",
+        "path": "./syntaxes/rathena.json"
+      }
     ],
     "snippets": [
-        {
-            "language": "rathena",
-            "path": "./snippets/rathena.json"
-        }
+      {
+        "language": "rathena",
+        "path": "./snippets/rathena.json"
+      }
     ]
   },
   "scripts": {
