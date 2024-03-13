@@ -68,6 +68,16 @@
         "language": "rathena",
         "path": "./snippets/rathena.json"
       }
+    ],
+    "commands": [
+      {
+          "command": "extension.convertEncoding",
+          "title": "Convert File Encoding to EUC-KR"
+      },
+      {
+          "command": "extension.convertSpacesToTabs",
+          "title": "Convert Spaces to Tabs in Active File"
+      }
     ]
   },
   "scripts": {
