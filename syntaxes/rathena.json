@@ -12,7 +12,7 @@
 			"name": "keyword.control.rathena"
 		},
 		{
-			"match": "\\b(?i)(set|setarray|end)\\b",
+			"match": "\\b(?i)(set|setarray|end|message|set_hp|set_mp|dialog)\\b",
 			"name": "support.function.1.rathena"
 		},
 		{
