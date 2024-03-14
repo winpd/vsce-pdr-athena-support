@@ -10,6 +10,8 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
         const linePrefix = document.lineAt(position).text.substr(0, position.character);
         const userTyped = linePrefix.split(' ').pop(); // 사용자가 최근에 입력한 단어를 가져옴
 
+        //TODO : 추후 intellisense 추가
+
         // 명령어와 관련된 세부 정보를 담은 객체
         const commandDetails: { [key: string]: { detail: string, documentation: string } } = {
             'set_name': { detail: '오브젝트의 이름을 설정합니다.', documentation: 'set_name .@id, "피디";' },

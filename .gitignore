@@ -3,3 +3,5 @@
 /devstuffs/
 /out/
 *.vsix
+test.ers
+dist/test.ers

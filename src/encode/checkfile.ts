@@ -42,7 +42,7 @@ export async function checkFileAndShowPopup(document: vscode.TextDocument) {
 
     // 알림 메시지
     await vscode.window.showInformationMessage(
-        `현재 파일 인코딩이 ${encodingResult.encoding} 입니다. EUC-KR로 설정해야 정상적인 스크립트 작업이 가능합니다.`, 
+        `현재 파일 인코딩이 ${encodingResult.encoding ?? 'EUC-KR이 아닌 형태'} 입니다. EUC-KR이 아닌 경우 정상적인 스크립트 작업이 불가능합니다.`, 
     );
 }
 
